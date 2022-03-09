@@ -4,6 +4,7 @@ body {
   color: #fff;
   position: relative;
   background: transparent;
+  overflow-x: hidden;
 }
 
 body::before {
@@ -32,7 +33,7 @@ a:hover {
 #landing {
   width: 100;
   height: 100vh;
-  background: url("https://images.pexels.com/photos/164005/pexels-photo-164005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") top right;
+  background: url("../image/back.jpg") top right;
   background-size: cover;
   position: relative;
 }
@@ -183,5 +184,41 @@ a:hover {
   min-height: 5rem;
   top: 0;
   z-index: 10 !important;
+}
+
+.cube {
+  position: absolute;
+  min-width: clamp(10vh, 10rem, 10vw);
+  min-height: clamp(20vh, 20rem, 20vw);
+  background-color: red;
+  animation-name: cube;
+  animation-duration: 5s;
+  animation-direction: normal;
+  z-index: 100 !important;
+  transform: translateY(-100%);
+  transform-origin: center;
+  animation-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+
+.offset100 {
+  transform: translateX(-100%) translateY(-100%);
+}
+
+@keyframes cube {
+  0% {
+    top: 0%;
+    background-color: rgba(255, 0, 0, 0);
+    min-width: clamp(10vh, 10rem, 10vw);
+  }
+  50% {
+    top: 50%;
+    background-color: lightseagreen;
+    min-width: clamp(7.5vh, 7.5rem, 7.5vw);
+  }
+  100% {
+    top: 100%;
+    background-color: rgba(255, 0, 0, 0);
+    min-width: clamp(10vh, 10rem, 10vw);
+  }
 }
 /*# sourceMappingURL=index.css.map */
