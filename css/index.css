@@ -221,4 +221,13 @@ a:hover {
     min-width: clamp(10vh, 10rem, 10vw);
   }
 }
+
+@media screen and (max-width: 660px) {
+  .cube {
+    max-width: 0px;
+    max-height: 0px;
+    display: hidden;
+    opacity: 0.0;
+  }
+}
 /*# sourceMappingURL=index.css.map */

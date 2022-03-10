@@ -211,3 +211,13 @@ z-index: 10 !important;}
   50%{top:50%;background-color:lightseagreen;min-width:clamp(7.5vh,7.5rem,7.5vw)}
   100%{
     top:100%;background-color: rgba(255,0,0,0);min-width:clamp(10vh,10rem,10vw);}}
+  
+  
+@media screen and (max-width:660px) {
+    .cube{
+      max-width:0px;
+      max-height:0px;
+      display:hidden;
+      opacity: 0.0;
+    }
+  }
