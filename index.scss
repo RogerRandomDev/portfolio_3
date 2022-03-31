@@ -1,223 +1,226 @@
-
-
 body {
-    font-family: sans-serif;
-    background-color: #040404;
-    color: #fff;
-    position: relative;
-    background: transparent;
-    overflow-x:hidden;
-    &::before {
-      content: "";
-      position: fixed;
-      background: black top right no-repeat;
-      background-size: cover;
-      right: 0;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      z-index: -1;
-    }
+  font-family: sans-serif;
+  background-color: #040404;
+  color: #fff;
+  position: relative;
+  background: transparent;
+  overflow-x: hidden;
+  &::before {
+    content: '';
+    position: fixed;
+    background: black top right no-repeat;
+    background-size: cover;
+    right: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: -1;
   }
-  
-  $primary-color: yellow;
-  $secondary-color: orange;
-  a {
-    color: $primary-color;
+}
+
+$primary-color: yellow;
+$secondary-color: orange;
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: 0.5s;
+  &:hover {
+    color: $secondary-color;
     text-decoration: none;
+  }
+}
+
+//the landing page
+#landing {
+  width: 100;
+  height: 100vh;
+  background: url('../image/back.jpg') top right;
+  background-size: cover;
+  position: relative;
+
+  &::before {
+    content: '';
+    background: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+  .landing-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+  h1 {
+    margin: 0 0 10px 0;
+    font-size: 64px;
+    font-family: fantasy;
+    color: #fff;
+  }
+  h2 {
+    color: #eee;
+    margin-bottom: 50px;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .btn-scroll {
     transition: 0.5s;
+    color: $primary-color;
+
+    em {
+      font-size: 48px;
+    }
     &:hover {
       color: $secondary-color;
-      text-decoration: none;
     }
   }
+}
+// skills
+.skills {
+  .progress {
+    height: 60px;
+    display: block;
+    background: none;
+    border-radius: 0;
 
-
-
-
-  //the landing page
-  #landing {
-    width: 100;
-    height: 100vh;
-    background: url("../image/back.jpg")
-      top right;
-    background-size: cover;
-    position: relative;
-  
-    &::before {
-      content: "";
-      background: rgba(0, 0, 0, 0.75);
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-    }
-    .landing-container {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      padding: 0 1rem;
-    }
-    h1 {
-      margin: 0 0 10px 0;
-      font-size: 64px;
-      font-family: fantasy;
-      color: #fff;
-    }
-    h2 {
-      color: #eee;
-      margin-bottom: 50px;
-      font-size: 24px;
-      font-weight: 500;
-      letter-spacing: 1px;
+    .skill {
+      padding: 10px 0;
+      margin: 0;
       text-transform: uppercase;
-    }
-    .btn-scroll {
-      transition: 0.5s;
-      color: $primary-color;
-  
-      em {
-        font-size: 48px;
-      }
-      &:hover {
-        color: $secondary-color;
-      }
-    }
-  }
-  // skills
-  .skills {
-    .progress {
-      height: 60px;
       display: block;
-      background: none;
-      border-radius: 0;
-  
-      .skill {
-        padding: 10px 0;
-        margin: 0;
-        text-transform: uppercase;
-        display: block;
-        font-weight: 500;
-        font-family: sans-serif;
-        color: #fff;
-  
-        .val {
-          float: right;
-          font-size: normal;
-        }
+      font-weight: 500;
+      font-family: sans-serif;
+      color: #fff;
+
+      .val {
+        float: right;
+        font-size: normal;
       }
-    }
-  
-    .progress-bar-wrap {
-      background: #040404;
-    }
-    .progress-bar {
-      height: 10px;
-      background: linear-gradient(to right, $primary-color, &$secondary-color);
     }
   }
-  // resume
-  .resume {
-    .resume-title {
-      font-size: 26px;
-      font-weight: 700;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      color: #fff;
-    }
-  
-    .resume-item {
-      padding: 0 0 20px 20px;
-      margin-top: -2px;
-      border-left: 2px solid $primary-color;
-      position: relative;
-    }
-  
-    h4 {
-      line-height: 18px;
-      font-size: 18px;
-      font-weight: 600;
-      text-transform: uppercase;
-      font-family: sans-serif;
-      color: $primary-color;
-      margin-bottom: 10px;
-    }
-    h5 {
-      font-size: 16px;
-      background: rgba(255, 255, 255, 0.2);
-      padding: 5px 15px;
-      display: inline-block;
-      font-weight: 600;
-      margin-bottom: 10px;
-      ul {
-        padding-left: 20px;
-  
-        li {
-          padding-bottom: 0;
-        }
-      }
-      &:last-child {
+
+  .progress-bar-wrap {
+    background: #040404;
+  }
+  .progress-bar {
+    height: 10px;
+    background: linear-gradient(to right, $primary-color, &$secondary-color);
+  }
+}
+// resume
+.resume {
+  .resume-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  .resume-item {
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid $primary-color;
+    position: relative;
+  }
+
+  h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    color: $primary-color;
+    margin-bottom: 10px;
+  }
+  h5 {
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 5px 15px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    ul {
+      padding-left: 20px;
+
+      li {
         padding-bottom: 0;
       }
-      &::before {
-        content: "";
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        border-radius: 50px;
-        left: -9px;
-        top: 0;
-        background: $secondary-color;
-        border: 2px solid $primary-color;
-      }
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50px;
+      left: -9px;
+      top: 0;
+      background: $secondary-color;
+      border: 2px solid $primary-color;
     }
   }
-  //the navbar
-.navbar{
+}
+//the navbar
+.navbar {
   min-width: 50vw;
-min-height: 5rem;
-top:0;
-z-index: 10 !important;}
-
-
+  min-height: 5rem;
+  top: 0;
+  z-index: 10 !important;
+}
 
 //the floating cubes
-.cube{
-  position:absolute;
-  min-width: clamp(10vh,10rem,10vw);
-  min-height: clamp(20vh,20rem,20vw);
+.cube {
+  position: absolute;
+  min-width: 5vmin;
+  min-height: 10vmin;
   background-color: red;
   animation-name: cube;
   animation-duration: 5s;
   animation-direction: normal;
   z-index: 100 !important;
-  transform:translateY(-100%);
-  transform-origin:center;
+  transform: translateY(-100%);
+  transform-origin: center;
   animation-timing-function: cubic-bezier(0, 0, 1, 1);
 }
-.offset100{
-  transform:translateX(-100%) translateY(-100%);
+.offset100 {
+  transform: translateX(-100%) translateY(-100%);
 }
-@keyframes cube{
-  0%{
-    top:0%;background-color: rgba(255,0,0,0);min-width:clamp(10vh,10rem,10vw)}
-  50%{top:50%;background-color:lightseagreen;min-width:clamp(7.5vh,7.5rem,7.5vw)}
-  100%{
-    top:100%;background-color: rgba(255,0,0,0);min-width:clamp(10vh,10rem,10vw);}}
-  
-  
-@media screen and (max-width:660px) {
-    .cube{
-      max-width:0px;
-      max-height:0px;
-      display:hidden;
-      opacity: 0.0;
-    }
+@keyframes cube {
+  0% {
+    top: 0%;
+    background-color: rgba(255, 0, 0, 0);
+    min-width: clamp(10vh, 10rem, 10vw);
   }
+  50% {
+    top: 50%;
+    background-color: lightseagreen;
+    min-width: clamp(7.5vh, 7.5rem, 7.5vw);
+  }
+  100% {
+    top: 100%;
+    background-color: rgba(255, 0, 0, 0);
+    min-width: clamp(10vh, 10rem, 10vw);
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .cube {
+    max-width: 0px;
+    max-height: 0px;
+    display: hidden;
+    opacity: 0;
+  }
+}
