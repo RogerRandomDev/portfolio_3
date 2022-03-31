@@ -8,7 +8,7 @@ body {
 }
 
 body::before {
-  content: "";
+  content: '';
   position: fixed;
   background: black top right no-repeat;
   background-size: cover;
@@ -39,7 +39,7 @@ a:hover {
 }
 
 #landing::before {
-  content: "";
+  content: '';
   background: rgba(0, 0, 0, 0.75);
   position: absolute;
   top: 0;
@@ -168,7 +168,7 @@ a:hover {
 }
 
 .resume h5::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 16px;
   height: 16px;
@@ -188,8 +188,8 @@ a:hover {
 
 .cube {
   position: absolute;
-  min-width: clamp(10vh, 10rem, 10vw);
-  min-height: clamp(20vh, 20rem, 20vw);
+  min-width: 5vmin;
+  min-height: 10vmin;
   background-color: red;
   animation-name: cube;
   animation-duration: 5s;
@@ -227,7 +227,7 @@ a:hover {
     max-width: 0px;
     max-height: 0px;
     display: hidden;
-    opacity: 0.0;
+    opacity: 0;
   }
 }
 /*# sourceMappingURL=index.css.map */
